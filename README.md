@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Built DocFlow for Copperlane YC W26 
 
-## Getting Started
+DocFlow is a lightweight AI underwriting copilot that converts borrower documents into structured financial intelligence.
 
-First, run the development server:
+This project was built as a technical exploration inspired by Copperlane (YC W26) and their thesis around AI-native mortgage intake systems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The goal was to explore a simple but important question:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Can borrower documents be transformed into structured underwriting signals in real time?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+DocFlow attempts to prototype that pipeline.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Built in ~5 hours (6pm → 11pm) as a technical exploration of AI-native mortgage intake workflows.
+## Overview
 
-## Learn More
+Mortgage underwriting often starts with unstructured borrower documents — payslips, bank statements, tax forms, etc.
 
-To learn more about Next.js, take a look at the following resources:
+DocFlow explores a pipeline where these documents are automatically parsed, structured, and analyzed to generate early underwriting insights.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pipeline:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Document → Text Extraction → Structured Financial JSON → Risk Rules → Underwriting Summary
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+• PDF ingestion and parsing for borrower documents  
+• AI-powered financial data extraction  
+• Strict JSON schema validation  
+• Deterministic underwriting risk checks  
+• Automated underwriting summary generation  
+• Clean product interface built with Next.js
+
+---
+
+## Technical Pipeline
+
+1. **Document Ingestion**
+   - Upload borrower financial documents (e.g., payslips)
+
+2. **Text Extraction**
+   - PDF parsing to obtain raw financial text
+
+3. **AI Structured Extraction**
+   - Gemini model converts unstructured text into structured financial JSON
+
+4. **Schema Validation**
+   - Ensures deterministic output fields
+
+5. **Risk Engine**
+   - Runs underwriting checks such as:
+     - income variance
+     - reserve adequacy
+     - anomaly detection
+
+6. **Underwriting Summary**
+   - Generates explainable signals for early risk assessment
+
+---
+
+## Tech Stack
+
+Next.js (App Router)  
+TypeScript  
+TailwindCSS  
+Gemini API  
+PDF Parsing  
+Rule-based Risk Engine
+
+---
+
+## Why This Project
+
+This prototype was built to explore the intersection of:
+
+- AI document intelligence
+- mortgage intake automation
+- structured underwriting workflows
+
+Built to showcase to the founders of Copperlane( YC W26)
+
+
+## Author
+
+Pushkar Chandra
